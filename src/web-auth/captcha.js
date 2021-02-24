@@ -39,7 +39,7 @@ function handleAuth0Provider(element, options, challenge, load) {
 }
 
 function injectRecaptchaScript(element, lang, callback) {
-  var callbackName = 'recaptchaCallback_' + Math.floor(Math.random() * 1000001);
+  var callbackName = 'recaptchaCallback_';
   window[callbackName] = function () {
     delete window[callbackName];
     callback();
